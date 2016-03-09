@@ -1,0 +1,29 @@
+
+ create or replace procedure JobAndJobOrder
+    (
+    jtitle jobs.jobtitle%type,
+    jcod jobs.jobcode%type,
+    jskill jobs.skill%type,
+    noyexp jobs.noyexp%type,
+    rel  jobs.reldate%type,
+    clo  jobs.clodate%type,
+    clid  jobs.clientid%type,
+   jbtitle joborder.jobtitle%type,
+   jbcod joborder.jobcode%type,
+   sk1 joborder.skill1%type,
+ sk2 joborder.skill2%type,
+   sk3 joborder.skill3%type,
+   sk4 joborder.skill4%type,
+   sk5 joborder.skill5%type,
+   sk6 joborder.skill6%type,
+   noy joborder.noyexp%type,
+  reld joborder.reldate%type,
+   clod joborder.clodate%type,
+   clids joborder.clientid%type
+   )
+   is
+   begin
+ 25  insert into jobs values(jtitle,jcod,jskill,noyexp,rel,clo,clid);
+ 26  insert into joborder values(jbtitle,jbcod,sk1,sk2,sk3,sclod,clids);
+ 27  end JobAndJobOrder;
+ 28  /

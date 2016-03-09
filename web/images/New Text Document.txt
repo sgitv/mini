@@ -1,0 +1,12 @@
+create or replace procedure sample
+(
+eid my.eid%type,
+ename my.ename%type,
+esal my.esal%type,
+eadd my.eadd%type,
+eph my.eph%type,
+)
+as begin
+
+insert into my values(eid,ename,esal,eadd,eph);
+end sample;

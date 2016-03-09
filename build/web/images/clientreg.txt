@@ -1,0 +1,24 @@
+create or replace procedure ClientReg
+(
+clid  client.clientid%type,
+cname client.clname%type,
+addr  client.address%type,
+cit   client.city%type,
+sta   client.state%type,
+nat   client.nation%type,
+nob   client.noofbranch%type,
+ctype client.cltype%type,
+cphno client.contphno%type,
+ext1  client.ext%type,
+comd  client.comdesc%type,
+ctper client.ctperson%type,
+webs  client.website%type,
+pas1   client.pass%type,
+conid1 CONSULTANT.conid%type,
+pas2   consultant.pass%type
+)
+is
+begin
+insert into client values(clid,cname,addr,cit,sta,nat,nob,ctype,cphno,ext1,comd,ctper,webs,pas1);
+insert into consultant values(conid1,pas2);
+end ClientReg;
